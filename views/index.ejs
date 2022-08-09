@@ -1,0 +1,43 @@
+<%- include('./layouts/app-header.ejs') %>
+
+
+
+
+  <!-- Main Content -->
+  <div class="background">
+    <div class="container" style="color: white;">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+          <% postList.forEach(function(post){%>
+            <a href="posts/<%=post._id%>">
+              <h2 style="color: white;">
+                <%=post.title %>
+              </h2>
+            </a>
+            <p class="post-meta">Posted by
+              <span>
+                <p>
+                <a href="#" style="color: white;">
+                  <%= post.username %>
+                </a>on
+                <%= post.createdAt.toDateString() %>
+              </p>
+              </span>
+            </p>
+            <hr>
+            <%})%>
+
+              <!-- Pager -->
+              <div class="clearfix">
+                <a class="btn btn-primary float-right" href="#">Older Posts →</a>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer-->
+  <hr>
+  <%- include('./layouts/app-footer.ejs') %>

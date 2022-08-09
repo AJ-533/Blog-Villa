@@ -1,0 +1,43 @@
+<%- include('./layouts/app-header.ejs')%>
+
+
+  <!-- Post title -->
+  <header class="background" style="height: 65vh; background-image: url('../<%=doc.image%>');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1 style="padding-top: 130px; font-size: 60px; color: white;">
+                <%= doc.title %>
+              </h1>
+              <span style="padding-top: 130px; color: white;">Posted by
+                <p>
+                <a href="#" style="color: white;">
+                  <%= doc.username %>
+                </a>on 
+                <%= doc.createdAt.toDateString() %>
+              </p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <%= doc.content %>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+
+
+  <%- include('./layouts/app-footer.ejs')%>
