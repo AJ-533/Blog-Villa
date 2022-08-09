@@ -1,5 +1,5 @@
 {
-  "name": "abc",
+  "name": "blog-villa",
   "version": "1.0.0",
   "description": "Creating a blogging website using Node js",
   "main": "index.js",
@@ -12,10 +12,15 @@
   "author": "Ashish",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
+    "connect-mongo": "^4.6.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-edge": "^2.0.2",
+    "express-fileupload": "^1.4.0",
+    "express-session": "^1.17.3",
+    "method-override": "^3.0.0",
     "mongoose": "^5.13.6",
     "nodemon": "^2.0.12",
     "startbootstrap-clean-blog": "^6.0.4"
